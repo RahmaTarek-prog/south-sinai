@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>خريطة التغيرات العمرانية - شمال سيناء</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      direction: rtl;
+      background-color: #f2f2f2;
+    }
+    #map {
+      height: 600px;
+      margin: 20px;
+      border: 2px solid #ccc;
+      border-radius: 15px;
+    }
+    #buttons {
+      margin: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      background-color: #2c3e50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1abc9c;
+    }
+  </style>
+</head>
+<body>
+  <h1>التغيرات العمرانية في شمال سيناء</h1>
+
+  <div id="buttons">
+    <button id="btn-2013">عمران 2013</button>
+    <button id="btn-2021">عمران 2021</button>
+    <button id="btn-2025">عمران 2025</button>
+    <button onclick="window.location.href='index.html'">الرجوع للرئيسية</button>
+  </div>
+  <div id="legend">
+  
+  <div style="display:inline-block; width:15px; height:15px; background-color:#9b59b6; margin:5px;"></div> منطقة عمرانية
+</div>
+
+
+  <div id="map"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- ربط ملف الجافاسكربت الخاص بالعمران -->
+  <script src="urban_script.js"></script>
+</body>
+</html>
